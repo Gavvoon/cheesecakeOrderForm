@@ -1,0 +1,71 @@
+/*This code was written by: Gavin Raguindin*/
+
+/*makes header 1 dark olive green*/
+h1 {
+    color: darkolivegreen;
+}
+
+/*changes backgrounf color of the text box*/
+textarea {
+    background-color: lightgoldenrodyellow;
+}
+
+/* makes the background of website lightblue*/
+body {
+    background-color: lightblue;
+  }
+
+/*changes button font*/
+button {
+    font-family: 'Courier New';
+}
+
+/*changes font of list*/
+ul {
+    font-family: 'Chalkduster';
+}
+
+/*dropdown button*/
+.januarydropdown {
+    background-color: #947ac4;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+  }
+  
+ /* The container needed to position the dropdown content */
+  .hoverdropdown {
+     position: absolute;
+     display: inline-block;
+  }
+  
+  /* hover dropdown month contents */
+  .dropdowncontents {
+     display: none;
+     position: absolute;
+     background-color: #f1f1f1;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+     max-height: 100px;
+     overflow-y: scroll;
+  }
+  
+  /* hover dropdown "links" inside the dropdown */
+  .dropdowncontents a {
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+  }
+  
+  /* change color of dropdown links on hover */
+  .dropdowncontents a:hover {background-color: #ddd;}
+  
+  /* show the dropdown menu on hover */
+  .hoverdropdown:hover .dropdowncontents {display: block;}
+  
+  /* change the background color of the dropdown button when the dropdown content is shown */
+  .hoverdropdown:hover .januarydropdown {background-color: #3e8e41;}
+

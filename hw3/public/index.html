@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!--This code was written by: Gavin Raguindin-->
+
+<html lang="en">
+
+<head>
+    <!--this was just a default html startup code-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--when code runs, google chrome automatically opens up the website, links css file with html file-->
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    
+    <!--tab title display-->
+    <title>Homework #1</title>
+
+    <!--loads Jquery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="javascripts/hide.js"></script>
+
+    <script src="javascripts/drop.js"></script>
+
+</head>
+
+<body>
+
+    <!--header title-->
+    <h1>Cheesecake Order Form</h1>
+    
+    <!--file access to image URL-->
+    <img src="https://sugarspunrun.com/wp-content/uploads/2019/01/Best-Cheesecake-Recipe-2-1-of-1-4.jpg" width="300px" height="250px" alt="plaincheesecake">
+    <img src="https://www.mybakingaddiction.com/wp-content/uploads/2022/09/close-up-slice-cherry-cheesecake-hero-735x735.jpg" width="300px" height="250px" alt="cherrycheesecake">
+    <img src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/recipe_legacy/5463-3-large.jpg?itok=l5_GcsqP" width="350px" height="250px" alt="chocholatecheesecake">
+    
+    <div id="cheesecakeform"> 
+        <!--header stating the quantity of topping-->
+        <p id="quantitytoppings">Quantity Topping</p>
+
+        <!--table needed to format the radio buttons and dropdown menu-->
+        <table id="buttons" style="width:25%">
+            <tr>
+                <td>
+                    <!--dropdown menu: when clicked allowed to choose from a range from 1-3-->
+                    <select id="quantitybuttons" name="dropdown">
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                    </select>
+                </td>
+            
+                <td>
+                    <!--radio buttons: user is only allowed to have one option selected at a time and will change if another option is chosen-->
+                    <div id="flavortopping" class="container">
+
+                        <input type="radio" id="plain" name="topping" value="plain">
+                        <label for="plain">Plain</label><br>
+        
+                        <input type="radio" id="cherry" name="topping" value="cherry">
+                        <label for="cherry">Cherry</label><br>
+  
+                        <input type="radio" id="chocolate" name="topping" value="chocolate">
+                        <label for="chocolate">Chocolate</label><br>
+                        
+                    </div>
+
+                </td>
+            </tr>
+
+        </table>
+
+        <!--textbox header and textbox with a place holder message-->
+        <label id="notes" for="name">Notes:</label><br>
+        <textarea id="Instructions" name="instructions" rows="5" cols="50" placeholder="Enter any special instructions here."></textarea><br><br>
+
+    </div>
+    
+    <!--Order Button-->
+    <button id="order" type="button" onclick="hide()">Order</button><br>
+    
+    <!--Bold text of total orders-->
+    <label id="orderformonth" style="font-size: 25px;"> Orders for&nbsp;</label>
+
+    <!--hover drop down menu for all the months-->
+    <div class="hoverdropdown"> 
+        <button class="activatemonthselection" id="januarydropdown" value="Jan">Jan</button>
+        <div class="dropdowncontents" id="monthcontents" onclick="drop()">
+            <a href="#" name="month" id="Jan1" value="Jan">Jan</a>
+            <a href="#" name="month" id="Feb2" value="Feb">Feb</a>
+            <a href="#" name="month" id="Mar3" value="Mar">Mar</a>
+            <a href="#" name="month" id="Apr4" value="Apr">Apr</a>
+            <a href="#" name="month" id="May5" value="May">May</a>
+            <a href="#" name="month" id="Jun6" value="Jun">Jun</a>
+            <a href="#" name="month" id="Jul7" value="Jul">Jul</a>
+            <a href="#" name="month" id="Aug8" value="Aug">Aug</a>
+            <a href="#" name="month" id="Sep9" value="Sep">Sep</a>
+            <a href="#" name="month" id="Oct10" value="Oct">Oct</a>
+            <a href="#" name="month" id="Nov11" value="Nov">Nov</a>
+            <a href="#" name="month" id="Dec12" value="Dec">Dec</a>
+        </div>
+    </div>
+
+    <!--list of all the orders in bullet points-->
+    <ul>
+        <li>11 cherry</li>
+        <li>17 chocolate</li>
+        <li>31 plain</li>
+    </ul>
+
+</body>
+</html>
